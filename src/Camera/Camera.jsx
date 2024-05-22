@@ -84,7 +84,7 @@ function Camera() {
 
                 <video id='thecamera' ref={videoRef} autoPlay playsInline 
                 style={{ width: '100%', transform: 'scaleX(-1)', 
-                borderRadius: '20px', position: 'relative' }} />
+                borderRadius: '20px', position: 'relative' , padding: '20px'}} />
                 <canvas ref={canvasRef} style={{ display: 'none' }} />
             </div>
 
