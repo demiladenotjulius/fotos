@@ -83,7 +83,7 @@ function Camera() {
             <div style={{height: '100%'}} className='vidDiv'>
 
                 <video id='thecamera' ref={videoRef} autoPlay playsInline 
-                style={{ width: '100%', height: '90vh', transform: 'scaleX(-1)', 
+                style={{ width: '100%', height: '100vh', transform: 'scaleX(-1)', 
                 borderRadius: '20px', position: 'relative' }} />
                 <canvas ref={canvasRef} style={{ display: 'none' }} />
             </div>
