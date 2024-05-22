@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react';
+import './Camera.css'
 
 function Camera() {
     const videoRef = useRef(null);
@@ -69,18 +70,19 @@ function Camera() {
     return (
         <div style={{width: '100%'}} className="mycontainer">
             <button onClick={toggleCameraButtons} style={{marginBottom: '30px'}} >Camera </button>
-            <button onClick={handleSnap}>Snap Picture</button>
             { ShowCameraButtons && (
                 <>
                <button id='front'  onClick={FrontCamera}>Front Camera</button>
                <button id='back' onClick={BackCamera} >Back Cmaera</button> 
+               <button style={{ position: 'absolute', top: '6rem', zIndex: '2'}} onClick={handleSnap}>Snap Picture</button>
+
                 </>
                 
             ) }
 
             <div style={{height: '70%'}} className='vidDiv'>
 
-                <video ref={videoRef} autoPlay playsInline style={{ width: '50vh', transform: 'scaleX(-1)', borderRadius: '10px', marginLeft: '-60px' }} />
+                <video id='thecamera' ref={videoRef} autoPlay playsInline style={{ width: '100%', transform: 'scaleX(-1)', borderRadius: '10px', position: 'relative' }} />
                 <canvas ref={canvasRef} style={{ display: 'none' }} />
             </div>
 
